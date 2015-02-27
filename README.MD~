@@ -1,0 +1,2 @@
+Python has two main built-in numeric classes that implement the integer and floating point data types : int and float
+Python bool class, will be quite useful for representing truth values : True and False with the standard boolean operators, and, or, and not.

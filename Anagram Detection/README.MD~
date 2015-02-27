@@ -1,0 +1,10 @@
+
+One string is an anagram of another if the second is simply a rearrangement of the first. 
+
+For example : 'heart' and 'earth' are anagrams
+              'python' and 'typhon' are anagrams 
+
+assumption : Strings are of equal length 
+             Strings are made up of symbols from the set of 26 lowercase alphabetic characters. 
+
+Aim : Write a boolean function that will take two strings and return whether they are anagrams.
