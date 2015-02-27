@@ -8,43 +8,34 @@
 
 import time
 def anagram_detect (string1 ,string2):
-	"""anagram detection by checkoff method"""
-	
+	"""anagram detection by checkoff method"""	
 	start = time.time()
 	# String length comparison
-	if len(string1) != len(string2):
-		print "Strings length should be equal... !!"
-	else:	
-		# Character split
-		string1 = list(string1)
-		string2 = list(string2)
-		string1_pos = 0
-		string1_found = True
-		# For each character in string1
-		while (string1_pos < len(string1) and string1_found ==True) :
-			string2_pos =0
-			string2_found = False
-			# For each character in string 2
-			while (string2_pos < len(string2) and string2_found == False):
-				# checkoff
-				if (string1[string1_pos] == string2[string2_pos]):
-					string2[string2_pos] == None
-					string2_found = True
-				else :
-					string2_pos = string2_pos + 1								
-			if string2_found == True:
-				string1_pos = string1_pos + 1		
-			else:
-				string1_found = False	
-		end = time.time()
-        # Result
-		if string1_found == True:
-			print "Strings are anagrams !!\t\tTime taken = ", end-start		
+	# Character split
+	string1 = list(string1)
+	string2 = list(string2)
+	pos1 = 0
+	found1 = True
+	# For each character in string1
+	while (pos1 < len(string1) and found1) :
+		pos2 =0
+		found2 = False
+		# For each character in string 2
+		while (pos2 < len(string2) and not found2):
+			# checkoff
+			if (string1[pos1] == string2[pos2]):
+				found2 = True
+			else :
+				pos2 = pos2 + 1								
+		if found2:
+			string2[pos2] == None
 		else:
-			print "Strings are not anagrams !!\t\tTime taken = ", end-start	
+			found1 = False	
+		pos1 = pos1 + 1		
+	end = time.time()
+	return found1, end-start
 		
 ## Sample inputs
-anagram_detect('abcd','adbc')
-anagram_detect('abc','adbc')
-anagram_detect('abcd','abde')
-anagram_detect('earth','heart')
+print anagram_detect('abcd','adbc')
+print anagram_detect('abcd','abde')
+print anagram_detect('earth','heart')
