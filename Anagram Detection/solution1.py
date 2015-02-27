@@ -10,7 +10,6 @@ import time
 def anagram_detect (string1 ,string2):
 	"""anagram detection by checkoff method"""	
 	start = time.time()
-	# String length comparison
 	# Character split
 	string1 = list(string1)
 	string2 = list(string2)
@@ -39,3 +38,4 @@ def anagram_detect (string1 ,string2):
 print anagram_detect('abcd','adbc')
 print anagram_detect('abcd','abde')
 print anagram_detect('earth','heart')
+print anagram_detect('abcdefgh','adghcbfe')
