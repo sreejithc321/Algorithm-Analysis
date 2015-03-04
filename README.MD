@@ -26,10 +26,8 @@ For example : 'heart' and 'earth' are anagrams, 'python' and 'typhon' are anagra
 #### Execution time:
 
    * Solution 1 : O(n^2)
-   * Solution 2 : O(nlogn), due to sorting
+   * Solution 2 : O(n^2)/O(nlogn), due to sorting
    * Solution 3 : O(n)
-
-NB : Solution 3 is the best (linear order of magnitude) algorithm for solving this problem. But sacrificed space in order to gain time
 
 
 
